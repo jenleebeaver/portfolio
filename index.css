@@ -1,0 +1,277 @@
+body {
+    /* prevents overlap in scroller */
+    --start-pos: -2em; 
+    --font-inter: 'Inter', sans-serif;
+    --font-grotesk: 'Space Grotesk', sans-serif;
+    margin: 4em 7.75em;
+}
+
+/* Breakpoint Desktop */
+@media only screen and (min-width: 1400px) {
+
+  .hide-desktop{
+    display: none !important;
+  }
+}
+
+/* 
+Breakpoints Mobile and Tablet */
+@media only screen and (min-width: 280px) and (max-width: 1400px) {
+  body {
+    margin: 1em 2em;
+  }
+  h2 {
+    font-size: 4em !important;
+  }
+  h3 {
+    font-size: 1.4em  !important;
+  }
+  h4 {
+    font-size: 2em  !important;
+  }
+  p {
+    font-size: 1em  !important;
+  }
+  .slides-container{
+    width: 80% !important;
+  }
+
+  .hide-m-t{
+    display: none !important;
+  }
+
+  @keyframes slide {
+    0% {
+      top: -20em !important;
+    }
+    25% {
+      top: 0em !important;
+    }
+    50% {
+      top: -2em !important;
+    }
+    75% {
+      top: -5em !important;
+    }
+    100% {
+        top: -8em !important;
+    }
+  }
+}
+
+h1 {
+    font-family: var(--font-inter);
+    font-weight:300;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: var(--font-inter);
+    font-weight:600;
+    font-size: 7.75em;
+    color: #606e79;
+}
+
+h3 {
+    font-family: var(--font-grotesk);
+    font-weight: 500;
+    font-size: 2em;
+    color:#606e79;
+}
+
+h4 {
+    font-family: var(--font-inter);
+    font-weight:600;
+    font-size: 3em;
+    color: #dee1e3;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+h4:hover {
+  font-size: 4em;
+}
+
+p {
+    font-family: var(--font-grotesk);
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    margin-bottom: 64px;
+    /* top: 50%;
+    transform: translate(-50%, -50%);   */
+  }
+  .link {
+    display: flex;
+    width: 75px;
+    height: 75px;
+    margin: 0 5px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  .link:hover {
+    color: #b48ee8;
+  }
+ 
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-left {
+    width: 50%;
+    height: 100vh;
+}
+
+.flex-right {
+    width: 50%;
+    height: 100vh;
+}
+
+.img-container {
+    background: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.img {
+    flex-grow: 1;
+    width: 20%;
+    max-width: 400px;
+    height: 100px;
+    border-radius: 16px;
+    opacity: 0;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Scroller styling */
+.scroller {
+    height: 16em;
+    line-height: 5em;
+    position: relative;
+    overflow: hidden;
+    width: 40em;
+  }
+  .scroller > span {
+    position: absolute;
+    top: var(--start-pos);
+    animation: slide 7s infinite;
+    font-weight: bold; 
+  }
+  @keyframes slide {
+    0% {
+      top: var(--start-pos);
+    }
+    25% {
+      top: -5em;
+    }
+    50% {
+      top: -23em;
+    }
+    75% {
+      top: -50em;
+    }
+    100% {
+        top: var(--start-pos);
+    }
+  }
+
+  /* Cursor */
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: #b48ee8;
+  }
+  .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }
+
+   /* hide cursor */
+   .page, .page a {
+    cursor: none;
+   }
+
+/* Slider  */
+  button {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 10px 5px;
+  }
+  
+  .controls {
+    padding: 10px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    min-height: 70px;
+    gap: 8px;
+  }
+  
+  .slides-container {
+    position: relative;
+    overflow: hidden;  
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    filter: drop-shadow(16px 16px 10px #ffff);
+    border-radius: 16px;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+  }
+  
+  .slide {
+    position: absolute;
+    font-size: 90px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    border-radius: 16px;
+  }
+  
+  .slides-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;  
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

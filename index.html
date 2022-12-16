@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    </style>
+    <title>jennifer.beaver</title>
+</head>
+<body>
+    <div class='flex-container'>
+        <nav class="nav">
+            <a href="#" class="link">
+                <p>About Me</p>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Desktop -->
+    <div class="flex-container page hide-m-t">
+        <!-- Cursor elements  -->
+        <div class="cursor cursor--small"></div>
+        <canvas class="cursor cursor--canvas" resize></canvas>
+
+        <div class="flex-left">
+            <!-- Scroller -->
+            <div class="scroller">
+                <span>
+                    <h2>Developer</h2><br/>
+                    <h2>Designer</h2><br/>
+                    <h2>UX/UI</h2><br/>
+                </span>
+            </div>
+            <div>
+                <h4>Stylebee</h4>
+                <h4>Chicken Soup for the Soul</h4>
+                <h4>Antarestech</h4>
+                <h4>imFORZA</h4>
+                <h4>First Republic Bank</h4>
+            </div>
+            <div>
+                <h3>Hi! 👋 Welcome to my site.</br>
+                Feel free to take a look around.</h3>
+            </div>
+            <!-- scroller end -->
+        </div>
+        <div class="flex-right">
+            <div class="slides-container">
+                <div class="slides-inner">
+                  <div class="slide">
+                    <img src="assets/nipit-hero.png" class="responsive">
+                  </div>
+                  <div class="slide">
+                    <img src="./assets/First-Republic-Bank-01.svg"/>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="controls">
+                <div id="prevButton">
+                    <img src="./assets/back-arrow.svg" alt="back by Landan Lloyd from https://thenounproject.com/browse/icons/term/back/" style="height: 64px;">
+                </div>
+                <div id="nextButton">
+                    <img src="./assets/forward-arrow.svg" style="height: 64px;">
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE -->
+    <div class="hide-desktop">
+        <!-- Scroller -->
+        <div class="scroller">
+            <span>
+                <h2>Developer</h2><br/>
+                <h2>Designer</h2><br/>
+                <h2>UX/UI</h2><br/>
+            </span>
+        </div>
+        <div>
+            <h4>Stylebee</h4>
+            <h4>Chicken Soup for the Soul</h4>
+            <h4>Antarestech</h4>
+            <h4>imFORZA</h4>
+            <h4>First Republic Bank</h4>
+        </div>
+        <div class="slides-container">
+            <div class="slides-inner">
+              <div class="slide">
+                <img src="assets/nipit-hero.png" class="responsive">
+              </div>
+              <div class="slide">
+                <img src="./assets/First-Republic-Bank-01.svg"/>
+              </div>
+            </div>
+          </div>
+          
+          <div class="controls">
+            <div id="prevButton">
+                <img id="backArrow" src="./assets/back-arrow.svg" alt="back by Landan Lloyd from https://thenounproject.com/browse/icons/term/back/" style="height: 64px;">
+            </div>
+            <div id="nextButton">
+                <img src="./assets/forward-arrow.svg" style="height: 64px;">
+            </div>
+          </div>
+        </div>
+        <div class="hide-desktop">
+            <h3>Hi! 👋 Welcome to my site.</br>
+            Feel free to take a look around.</h3>
+        </div>
+        <!-- scroller end -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="auto-slider.js"></script>
+</body>
+</html>
